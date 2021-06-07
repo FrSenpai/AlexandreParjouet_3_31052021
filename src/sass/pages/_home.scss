@@ -40,10 +40,6 @@ main {
         height: 400px;
         justify-content: flex-start;
         align-items: flex-start;
-        h3 {
-            width: fit-content;
-            margin: 50px 0px 20px 20px;
-        }
 
         ul {
             width: 100%;
@@ -84,6 +80,61 @@ main {
                 position: absolute;
                 left: 8px;
 
+            }
+        }
+    }
+
+    .ctnRestaurant {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: $secondary-color;
+        ul {
+            width: 100%;
+            list-style: none;
+            li {
+                margin-bottom: 20px;
+                width: 100%;
+                span {
+                    color: $darkGreen;
+                    background-color: $lightGreen;
+                    padding: 5px 10px 5px 10px;
+                    position: absolute;
+                    right: 40px;
+                    margin-top: 15px;
+                    border-radius: 5px;
+                }
+                figure {
+                    width: 90%;
+                    margin: auto;
+                    border-radius: 15px;
+                    background-color: #fff;
+                    img {
+                        width: 100%;
+                        height: 180px;
+                        border-top-right-radius: $borderRadiusRestaurantsCards;
+                        border-top-left-radius: $borderRadiusRestaurantsCards;
+                    }
+                    figcaption {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-bottom-right-radius: $borderRadiusRestaurantsCards;
+                        border-bottom-left-radius: $borderRadiusRestaurantsCards;
+                        div {
+                            margin: 10px;
+                        }
+                        .fa-heart {
+                            font-size: 20px;
+                            margin-right: 20px;
+                            cursor: pointer;
+                           
+                        }
+
+                    
+                    }
+                }
             }
         }
     }

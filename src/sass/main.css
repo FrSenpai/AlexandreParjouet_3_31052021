@@ -1,4 +1,4 @@
-html, body, ul, p, li, span, h1, h2, h3 {
+html, body, ul, p, li, span, h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
 }
@@ -48,6 +48,13 @@ h3 {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.columnBox h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 50px 0px 20px 20px;
 }
 
 header h1 {
@@ -128,13 +135,6 @@ main .ctnOperation {
           align-items: flex-start;
 }
 
-main .ctnOperation h3 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 50px 0px 20px 20px;
-}
-
 main .ctnOperation ul {
   width: 100%;
   clear: both;
@@ -181,5 +181,78 @@ main .ctnOperation ul li::before {
   border-radius: 50%;
   position: absolute;
   left: 8px;
+}
+
+main .ctnRestaurant {
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #eaeaea;
+}
+
+main .ctnRestaurant ul {
+  width: 100%;
+  list-style: none;
+}
+
+main .ctnRestaurant ul li {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+main .ctnRestaurant ul li span {
+  color: #0e8f70;
+  background-color: #99e2d0;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  right: 40px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+main .ctnRestaurant ul li figure {
+  width: 90%;
+  margin: auto;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+main .ctnRestaurant ul li figure img {
+  width: 100%;
+  height: 180px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+main .ctnRestaurant ul li figure figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+main .ctnRestaurant ul li figure figcaption div {
+  margin: 10px;
+}
+
+main .ctnRestaurant ul li figure figcaption .fa-heart {
+  font-size: 20px;
+  margin-right: 20px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
