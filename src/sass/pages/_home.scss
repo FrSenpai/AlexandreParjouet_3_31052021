@@ -9,8 +9,6 @@ main {
         background-color: $secondary-color;
         width: 100%;
         box-shadow: 0px 2px 5px 0px rgba(207, 207, 207, 1) inset;
-        -webkit-box-shadow: 0px 2px 5px 0px rgba(207, 207, 207, 1) inset;
-        -moz-box-shadow: 0px 2px 5px 0px rgba(207, 207, 207, 1) inset;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -30,9 +28,11 @@ main {
         padding: 40px 0px 40px 0px;
         text-align: center;
         height: 200px;
+        width: 100%;
         h2,p {
             width: 80%;
         }
+
     }
 
     .ctnOperation {
@@ -56,9 +56,12 @@ main {
                 border-radius: 15px;
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
                 .operationIcons {
-                    margin: 0px 30px 0px 30px;
+                    margin: 0px 5px 0px 5px;
                     font-size: 20px;
                     color: $darkGray;
+                    @media screen and (min-width:350px) {
+                        margin: 0px 30px 0px 30px;
+                    }
                 }
                 span {
                     margin: auto;
@@ -70,6 +73,7 @@ main {
                         color: $darkPurple;
                     }
                 }
+                
             }
             li::before {
                 content: counter(inst);
@@ -77,8 +81,8 @@ main {
                 color: #fff;
                 padding: 0px 5px 0px 5px;
                 border-radius: 50%;
-                position: absolute;
-                left: 8px;
+                position: relative;
+                left: -10px;
 
             }
         }
@@ -93,9 +97,19 @@ main {
         ul {
             width: 100%;
             list-style: none;
+            @media screen and (min-width:$ipad) {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
             li {
                 margin-bottom: 20px;
                 width: 100%;
+                @media screen and (min-width:$ipad) {
+                    width: 45%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
                 span {
                     color: $darkGreen;
                     background-color: $lightGreen;
@@ -104,17 +118,29 @@ main {
                     right: 40px;
                     margin-top: 15px;
                     border-radius: 5px;
+                    @media screen and (min-width:$ipad) {
+                        position: relative;
+                        bottom: -40px;
+                        left: -10px;
+                    }
                 }
                 figure {
                     width: 90%;
                     margin: auto;
                     border-radius: 15px;
                     background-color: #fff;
+                    @media screen and (min-width:$ipad) {
+                        width: 100%;
+                        
+                    }
                     img {
                         width: 100%;
                         height: 180px;
                         border-top-right-radius: $borderRadiusRestaurantsCards;
                         border-top-left-radius: $borderRadiusRestaurantsCards;
+                        @media screen and (min-width:$ipad) {
+                            height: 350px;
+                        }
                     }
                     figcaption {
                         display: flex;
@@ -158,7 +184,7 @@ main {
                             -webkit-text-fill-color: transparent;
                             opacity: 0;
                             transform: scale(0);
-                            transition: .3s ease;
+                            transition: .5s ease;
                         }
                         
                     }
