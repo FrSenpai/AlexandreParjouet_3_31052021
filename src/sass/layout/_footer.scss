@@ -17,6 +17,9 @@ footer {
 
             .fa-utensils, .fa-hands-helping {
                 margin-right: 10px;
+                font-size: $footerIconsSize;
+                width: $footerIconsSize;
+                height: $footerIconsSize;
             }
         }
     }
