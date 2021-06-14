@@ -1,0 +1,45 @@
+#ctnLoading {
+    height: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    animation: hide 3s;
+    opacity: 0;
+}
+
+#loading {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: $purpleBtn;
+    animation: spin 1s infinite;
+  }
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg);}
+  }
+
+  @keyframes hide {
+      from {
+          opacity: 1;
+          height: 100%;
+      }
+      99% {
+          opacity: 1;
+          height: 100%;
+      }
+    to {
+        opacity: 0;
+        height: 0% !important;
+        max-height: 0px !important;
+        overflow: hidden;
+    }
+  }
