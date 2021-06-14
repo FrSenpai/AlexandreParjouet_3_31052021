@@ -89,6 +89,7 @@ main {
         align-items: flex-start;
         justify-content: flex-start;
         background-color: $secondary-color;
+        padding-bottom: 30px;
         ul {
             width: 100%;
             list-style: none;
@@ -135,6 +136,16 @@ main {
                             position: relative;
                             z-index: 1;
                             cursor: pointer;
+                            &:hover {
+                                background: linear-gradient(#FF79DA, #9356DC);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                -webkit-text-stroke: 0px white;
+                                .heart-color {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                }
+                            }
                         }
 
                         .heart-color {
@@ -149,18 +160,7 @@ main {
                             transform: scale(0);
                             transition: .3s ease;
                         }
-
-                        .heart:hover .heart-color {
-                            transform: scale(1);
-                            opacity: 1;
-                        }
-
-                        .heart:hover {
-                            background: linear-gradient(#FF79DA, #9356DC);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            -webkit-text-stroke: 0px white;
-                        }
+                        
                     }
                 }
             }
