@@ -40,12 +40,21 @@ main {
         height: 400px;
         justify-content: flex-start;
         align-items: flex-start;
-
+        @media screen and (min-width:$startDesktop) {
+            height: fit-content;
+            padding-bottom: 20px;
+        }
         ul {
             width: 100%;
             clear: both;
             list-style: none;
             list-style-position: outside !important;
+            @media screen and (min-width:$startDesktop) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+            }
             li {
                 margin: auto;
                 counter-increment: inst;
@@ -55,6 +64,12 @@ main {
                 padding: 20px 0px 20px 0px;
                 border-radius: 15px;
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                @media screen and (min-width:$startDesktop) {
+                    width: 30%;
+                    max-width: 475px;
+                    display: flex;
+                    flex-direction: row;
+                }
                 .operationIcons {
                     margin: 0px 5px 0px 5px;
                     font-size: 20px;
@@ -109,6 +124,10 @@ main {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-end;
+                }
+                @media screen and (min-width:$startDesktop) {
+                    flex-basis: 34%;
+
                 }
                 span {
                     color: $darkGreen;
