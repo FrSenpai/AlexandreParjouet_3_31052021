@@ -16,3 +16,10 @@ h3 {
 .bold {
     font-weight: 500;
 }
+
+.blankLink {
+    text-decoration: none;
+    &:visited {
+        color: initial;
+    }
+}
