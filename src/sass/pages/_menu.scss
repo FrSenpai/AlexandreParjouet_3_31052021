@@ -1,9 +1,13 @@
+body {
+    animation: none;
+}
 header {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 90%;
     margin: auto;
+    animation: none;
     .fa-arrow-left {
         font-size: 20px;
     }

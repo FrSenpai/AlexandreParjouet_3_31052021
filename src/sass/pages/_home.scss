@@ -1,3 +1,15 @@
+body {
+    animation: hideOverflow 3s;
+}
+
+@keyframes hideOverflow {
+    from {
+        max-height: 100%;
+        overflow: hidden;
+    }
+    99%{max-height: 100%;overflow: hidden;}
+    to { max-height: none;}
+}
 main {
     display: flex;
     opacity: 1;
