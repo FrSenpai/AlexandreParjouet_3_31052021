@@ -1,6 +1,5 @@
 .ctnMenus {
-    position: relative;
-    top: -30px;
+    margin-top: -30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,5 +48,18 @@
                 }
             }
         }
+    }
+
+    
+}
+
+.ctnGetBtn {
+    width: 100%;
+    background-color: $primary-color;
+    .ctaBtn {
+        padding: 10px 35px;
+        display: block;
+        margin: auto;
+        margin-bottom: 70px;
     }
 }
