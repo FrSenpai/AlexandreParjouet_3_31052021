@@ -1,11 +1,27 @@
 .menuBanner {
     figure {
+        background-color: $primary-color;
         img {
             width: 100%;
         }
 
         figcaption {
-            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            background-color: $primary-color;
+            position: relative;
+            top: -30px;
+            border-radius: 25px;
+            padding: 25px 0px;
+            h2 {
+                font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+            }
+            //reset margin inherited by css components
+            .fa-heart{
+                margin: 0;
+            }
         }
     }
 
