@@ -1,3 +1,14 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    .fa-arrow-left {
+        font-size: 20px;
+    }
+}
+
 .ctnMenus {
     margin-top: -30px;
     display: flex;
@@ -24,6 +35,14 @@
         ul {
             margin-top: 15px;
             list-style: none;
+            @media screen and (min-width:$startDesktop) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+            }
             li {
                 background-color: white;
                 list-style: none;
@@ -31,12 +50,18 @@
                 padding: 10px;
                 border-radius: 15px;
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                @media screen and (min-width:$startDesktop) {
+                   
+                    width: 30%;
+                }
                 .rowPrice {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     width: 90%;
-
+                    @media screen and (min-width: $startDesktop) {
+                        width: 95%;
+                    }
                     .bold {
                         font-weight: bold;
                         font-size: 16px;
