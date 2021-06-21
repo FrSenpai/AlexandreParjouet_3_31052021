@@ -16,9 +16,16 @@ footer {
             color: white;
             padding-bottom: 10px;
             cursor: pointer;
+            width: fit-content;
+            a {
+                text-decoration: none;
+                color: white;
+               
+            }
             &:hover {
                 text-decoration: underline;
-            }
+            } 
+            
             .fa-utensils, .fa-hands-helping {
                 margin-right: 10px;
                 font-size: $footerIconsSize;

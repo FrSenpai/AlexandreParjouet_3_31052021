@@ -1,3 +1,4 @@
+// Hide overflow when loading spinner !
 body {
     animation: hideOverflow 3s;
 }
@@ -10,6 +11,7 @@ body {
     99%{max-height: 100%;overflow: hidden;}
     to { max-height: none;}
 }
+
 main {
     display: flex;
     opacity: 1;
@@ -18,7 +20,6 @@ main {
     justify-content: center;
     animation: appear 3s;
     z-index: 100;
-
     @keyframes appear {
         from {
             opacity: 0;
