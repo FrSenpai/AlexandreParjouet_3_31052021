@@ -35,6 +35,10 @@ header {
         animation: mainDish 1s ease;
     }
 
+    .hidden {
+        display: none;
+    }
+
     .menu {
         width: 90%;
         display: flex;
