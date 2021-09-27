@@ -28,7 +28,7 @@
                 color: white;
             }
         }
-
+        
         &:hover {
             .ctnHoverAnimation {
                 animation: pick 0.5s;
@@ -38,6 +38,16 @@
                 }
             }
         }
+        
+        &:not(:hover) {
+            .ctnHoverAnimation {
+                animation: leave 0.5s;
+            }
+            
+        }
+        
+            
+        
     }
 }
 
@@ -57,5 +67,15 @@
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes leave {
+    from {
+        margin-right: 0px;
+    }
+
+    100% {
+        margin-right: -60px;
     }
 }
