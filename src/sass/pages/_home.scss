@@ -1,0 +1,239 @@
+// Hide overflow when loading spinner !
+body {
+    animation: hideOverflow 3s;
+}
+
+@keyframes hideOverflow {
+    from {
+        max-height: 100%;
+        overflow: hidden;
+    }
+    99%{max-height: 100%;overflow: hidden;}
+    to { max-height: none;}
+}
+
+main {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: appear 3s;
+    z-index: 100;
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .ctnLocalisation {
+        padding: 20px 0px 20px 0px;
+        background-color: $secondary-color;
+        width: 100%;
+        box-shadow: 0px 2px 5px 0px rgba(207, 207, 207, 1) inset;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .fa-map-marker-alt {
+            margin-right: 15px;
+        }
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    .ctnHook {
+        background-color: $primary-color;
+        padding: 40px 0px 40px 0px;
+        text-align: center;
+        height: 200px;
+        width: 100%;
+
+        h2,
+        p {
+            width: 80%;
+        }
+
+    }
+
+    .ctnOperation {
+        width: 100%;
+        height: 400px;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        @media screen and (min-width:$startDesktop) {
+            height: fit-content;
+            padding-bottom: 20px;
+        }
+
+        ul {
+            width: 100%;
+            clear: both;
+            list-style: none;
+            list-style-position: outside !important;
+
+            @media screen and (min-width:$startDesktop) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+
+            li {
+                margin: auto;
+                counter-increment: inst;
+                width: 90%;
+                background-color: $primary-color;
+                margin-bottom: 20px;
+                padding: 20px 0px 20px 0px;
+                border-radius: 15px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                cursor: default;
+
+                &:hover {
+                    background-color: $whitePink;
+
+                    .operationIcons {
+                        color: $darkPurple;
+                    }
+                }
+
+                @media screen and (min-width:$startDesktop) {
+                    width: 30%;
+                    max-width: 475px;
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                .operationIcons {
+                    margin: 0px 5px 0px 5px;
+                    font-size: 20px;
+                    color: $darkGray;
+
+                    @media screen and (min-width:350px) {
+                        margin: 0px 30px 0px 30px;
+                    }
+                }
+
+                span {
+                    margin: auto;
+                    font-weight: bold;
+                }
+
+
+
+            }
+
+            li::before {
+                content: counter(inst);
+                background: $darkPurple;
+                color: #fff;
+                padding: 0px 5px 0px 5px;
+                border-radius: 50%;
+                position: relative;
+                left: -10px;
+
+            }
+        }
+    }
+
+    .ctnRestaurant {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: $secondary-color;
+        padding-bottom: 30px;
+
+        ul {
+            width: 100%;
+            list-style: none;
+
+            @media screen and (min-width:$ipad) {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            li {
+                margin-bottom: 20px;
+                width: 100%;
+
+                @media screen and (min-width:$ipad) {
+                    width: 45%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+
+                @media screen and (min-width:$startDesktop) {
+                    flex-basis: 34%;
+
+                }
+
+                span {
+                    color: $darkGreen;
+                    background-color: $lightGreen;
+                    padding: 5px 10px 5px 10px;
+                    position: absolute;
+                    right: 40px;
+                    margin-top: 15px;
+                    border-radius: 5px;
+
+                    @media screen and (min-width:$ipad) {
+                        position: relative;
+                        bottom: -40px;
+                        left: -10px;
+                    }
+                }
+
+                figure {
+                    width: 90%;
+                    margin: auto;
+                    border-radius: 15px;
+                    background-color: #fff;
+
+                    @media screen and (min-width:$ipad) {
+                        width: 100%;
+
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 180px;
+                        border-top-right-radius: $borderRadiusRestaurantsCards;
+                        border-top-left-radius: $borderRadiusRestaurantsCards;
+
+                        @media screen and (min-width:$ipad) {
+                            height: 350px;
+                        }
+                    }
+
+                    figcaption {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-bottom-right-radius: $borderRadiusRestaurantsCards;
+                        border-bottom-left-radius: $borderRadiusRestaurantsCards;
+
+                        section {
+                            margin: 10px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

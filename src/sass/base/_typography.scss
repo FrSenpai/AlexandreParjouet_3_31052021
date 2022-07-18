@@ -1,0 +1,27 @@
+p, span, li {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: $h2-size; 
+}
+h3 {
+    font-size: $h3-size;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.blankLink {
+    text-decoration: none;
+    color: black;
+    &:visited {
+        color: initial;
+    }
+    width: 100%;
+}

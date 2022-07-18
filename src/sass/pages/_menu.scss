@@ -1,0 +1,167 @@
+body {
+    animation: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    animation: none;
+
+    .fa-arrow-left {
+        font-size: 20px;
+    }
+
+    h1 {
+        width: 100%;
+    }
+}
+
+.ctnMenus {
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $primary-color;
+    width: 100%;
+    overflow: hidden;
+    .entry {
+        animation: entry 1s ease;
+    }
+
+    .mainDish {
+        animation: mainDish 1s ease;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .menu {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        h3 {
+            font-weight: 300;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .underTitle {
+            width: 35px;
+            height: 3px;
+            background-color: $lightGreen;
+        }
+
+        ul {
+            margin-top: 15px;
+            list-style: none;
+
+            @media screen and (min-width:$startDesktop) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+            }
+
+            li {
+                background-color: white;
+                list-style: none;
+                margin-bottom: 10px;
+                height: 58px;
+                border-radius: 15px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                .nowrap {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 80%;
+                }
+
+                .descDish {
+                    max-width: 100%;
+                } 
+
+
+                @media screen and (min-width:$startDesktop) {
+
+                    width: 30%;
+                }
+
+                .rowPrice {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 90%;
+
+                    @media screen and (min-width: $startDesktop) {
+                        width: 95%;
+                    }
+
+                    .bold {
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+
+                    h5 {
+                        font-size: 14px;
+                        margin: 0;
+                        font-weight: normal;
+                    }
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.ctnGetBtn {
+    width: 100%;
+    background-color: $primary-color;
+
+    .ctaBtn {
+        padding: 10px 35px;
+        display: block;
+        margin: auto;
+        margin-bottom: 70px;
+    }
+}
+
+@keyframes entry {
+    from {
+        transform: translateY(300%);
+        z-index: 0;
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        z-index: 1;
+        opacity: 1;
+    }
+
+}
+@keyframes mainDish {
+    from {
+        transform: translateY(700%);
+        z-index: 0;
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        z-index: 1;
+        opacity: 1;
+    }
+
+}

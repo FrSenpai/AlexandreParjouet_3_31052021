@@ -1,0 +1,46 @@
+.menuBanner {
+    figure {
+        background-color: $primary-color;
+        .ctnBanner {
+            max-height: 550px;
+            overflow: hidden;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            @media screen and (min-width: 1100px) {
+                position: relative;
+                top: -200px;
+            }
+
+            @media screen and (min-width: 1600px) {
+                top: -400px;
+            }
+
+            @media screen and (min-width:2200px) {
+                top: -600px
+            }
+        }
+
+        figcaption {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            background-color: $primary-color;
+            position: relative;
+            top: -30px;
+            border-radius: 25px;
+            padding: 25px 0px;
+            h2 {
+                font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+                text-align: center;
+            }
+            //reset margin inherited by css components
+            .fa-heart{
+                margin: 0;
+            }
+        }
+    }
+
+}
